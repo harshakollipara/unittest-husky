@@ -5,13 +5,13 @@ import AsyncStorage from '@react-native-community/async-storage';
 export const saveItems = async (recentItem) => {
     try {
         const existingItem = await getItems();
-        console.log('Hi');
         const newItem = [recentItem, ...existingItem];
         return AsyncStorage.setItem(
             'DEMO::recentItem',
             JSON.stringify(newItem)
         );
     } catch (err) {
+
         return;
     }
 };
