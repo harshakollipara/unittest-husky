@@ -11,7 +11,7 @@ export const saveItems = async (recentItem) => {
             JSON.stringify(newItem)
         );
     } catch (err) {
-
+        console.log("error");
         return;
     }
 };
